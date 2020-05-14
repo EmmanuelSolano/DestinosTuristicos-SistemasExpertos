@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Acercade">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="137dp"
+        android:layout_marginLeft="137dp"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@mipmap/ic_launcher_acerca_icon"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="65dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="165dp"
+        android:layout_marginLeft="165dp"
+        android:layout_marginTop="5dp"
+        android:text="Versión 1.0"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginBottom="102dp"
+        android:text="Esta aplicación permite a los usuarios poder buscar destinos turísticos cercanos aun lugar específico, donde se pueden especificar parámetros de entrada como la duración del recorrido, tipo de camino, precio de entrada del destino y estilo. La App le recomendará una serie de destinos turísticos que más se asemejen a los parámetros dados."
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView12"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="182dp"
+        android:paddingLeft="15dp"
+        android:text="Desarrolladores: Ronald Segura Brenes B16213, Emmanuel Solano Navarro B77436. Curso IF7103 Sistemas Expertos para la Administración."
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="14sp" />
+
+</RelativeLayout>

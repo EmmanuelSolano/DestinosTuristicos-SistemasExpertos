@@ -1,4 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/inicio"
+        android:title="Inicio"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/infoApp"
+        android:title="Quiénes somos"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/acerca"
+                android:title="Acerca de" />
+
+        </menu>
+    </item>
+    <item
+        android:id="@+id/destinosCaracteristicas"
+        android:title="Buscar destinos turísticos cercanos"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/mapadelSitio"
+        android:title="Mapa del sitio"
+        app:showAsAction="ifRoom"/>
 
 </menu>

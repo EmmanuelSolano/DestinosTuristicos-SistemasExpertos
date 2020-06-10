@@ -14,6 +14,15 @@ public class LugarElegido extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lugar_elegido);
+
+        Intent intent = getIntent();
+
+        String place = (String)intent.getSerializableExtra("place");
+        String activity = (String)intent.getSerializableExtra("activity");
+        String time = (String)intent.getSerializableExtra("time");
+        String typeRoad = (String)intent.getSerializableExtra("road");
+        String cost = (String)intent.getSerializableExtra("cost");
+        String style = (String)intent.getSerializableExtra("style");
     }
 
     @Override

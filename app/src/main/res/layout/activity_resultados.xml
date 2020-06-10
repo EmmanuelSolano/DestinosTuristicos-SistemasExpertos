@@ -88,7 +88,7 @@
         app:layout_constraintVertical_bias="0.846" />
 
     <Button
-        android:id="@+id/btn_showResult"
+        android:id="@+id/btn_showResult1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -101,7 +101,7 @@
         app:layout_constraintVertical_bias="0.295" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btn_showResult2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -114,7 +114,7 @@
         app:layout_constraintVertical_bias="0.622" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btn_showResult3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

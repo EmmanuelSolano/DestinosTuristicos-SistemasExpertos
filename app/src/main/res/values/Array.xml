@@ -6,46 +6,58 @@
         <item>Cartago</item>
         <item>Alajuela</item>
         <item>San José</item>
-        <item>Limón</item>
         <item>Heredia</item>
-        <item>Puntarenas</item>
         <item>Guanacaste</item>
+        <item>Limón</item>
+        <item>Puntarenas</item>
     </string-array>
 
 
     <string-array name="horas">
+        <item>menor 30 min</item>
         <item>30 minutos</item>
-        <item>1 hora</item>
-        <item>1:30 minutos</item>
-        <item>2 horas</item>
-        <item>2:30 minutos</item>
-        <item>3 horas</item>
-        <item>3:30 minutos</item>
-        <item>mayor a 4 horas</item>
+        <item>1 h</item>
+        <item>1 h 30 min</item>
+        <item>2 h</item>
+        <item>2h 30 min</item>
+        <item>3 h</item>
+        <item>3h 30 min</item>
+        <item>4 h</item>
+        <item>4 h 30 min</item>
+        <item>5 h</item>
+        <item>5 h 30 min</item>
+        <item>mayor a 6 h</item>
     </string-array>
 
     <string-array name="tipo">
-        <item>Asfalto</item>
         <item>Lastre</item>
-        <item>Con curvas</item>
-        <item>Sin curvas</item>
+        <item>Asfalto</item>
         <item>Empinado</item>
         <item>Llano</item>
+        <item>Con curvas</item>
+        <item>Sin curvas</item>
     </string-array>
 
     <string-array name="precio">
-        <item>$0-$100</item>
-        <item>$100-$500</item>
-        <item>$500-$1000</item>
-        <item>$1000-$5000</item>
-        <item>$5000-$10000</item>
-        <item>mayor a $10000</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2500</item>
+        <item>3000</item>
+        <item>8000</item>
+        <item>11000</item>
+        <item>15000</item>
+        <item>20000</item>
+        <item>23000</item>
+        <item>30000</item>
+        <item>80000</item>
+        <item>100000</item>
+        <item>200000</item>
     </string-array>
 
     <string-array name="estilo">
+        <item>Montaña</item>
         <item>Campo</item>
         <item>Ciudad</item>
-        <item>Bosque</item>
         <item>Playa</item>
     </string-array>
 </resources>

@@ -87,12 +87,12 @@
         app:srcCompat="@mipmap/ic_launcher_estilo" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_buscar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="-5dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginStart="-17dp"
+        android:layout_marginBottom="11dp"
         android:layout_toEndOf="@+id/btn_time"
         android:text="Buscar"
         android:textColor="@color/common_google_signin_btn_text_dark_focused" />
@@ -126,11 +126,11 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button"
         android:layout_alignEnd="@+id/textView5"
+        android:layout_alignParentBottom="true"
         android:layout_marginLeft="240dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="712dp"
         android:text="Estilo"
         android:textColor="@color/common_google_signin_btn_text_dark_focused" />
 

@@ -7,13 +7,21 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Caracteristicas extends AppCompatActivity {
+
+    private String tiempo="";
+    private String tipoCamino="";
+    private String precio="";
+    private String estiloDestino="";
+    private String namePlaceSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +33,32 @@ public class Caracteristicas extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.lugares, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+
+        Button buscar = (Button)findViewById(R.id.btn_buscar);
+        buscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //hace el paso de actividades
+                if(tiempo.equals("")||tipoCamino.equals("")||precio.equals("")||estiloDestino.equals(""))
+                    Toast.makeText(getApplicationContext(), "Por favor ingrese un valor para tiempo, camino, precio o estilo", Toast.LENGTH_LONG ).show();
+                else {
+                    Intent intentResults = new Intent(Caracteristicas.this, Resultados.class);
+                    //pasamos el nombre de usuario y la actividad
+                    Bundle bundleResults = new Bundle();
+                    namePlaceSearch = ((Spinner)findViewById(R.id.spinner)).getSelectedItem().toString();
+                /*
+                Toast.makeText(getApplicationContext(), tipoCamino, Toast.LENGTH_LONG ).show();*/
+                    intentResults.putExtra("place",namePlaceSearch);
+                    intentResults.putExtra("time",tiempo);
+                    intentResults.putExtra("typeRoad",tipoCamino);
+                    intentResults.putExtra("cost",precio);
+                    intentResults.putExtra("style",estiloDestino);
+                    intentResults.putExtras(bundleResults);
+                    startActivity(intentResults);
+                }
+            }
+        });
         
 
         this.showPopupTime();
@@ -38,7 +72,10 @@ public class Caracteristicas extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.principal, menu);
         return true;
+
+
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -80,6 +117,8 @@ public class Caracteristicas extends AppCompatActivity {
         }
     }
 
+
+
     private void chargeComboTime(View popUpTimeView){
         Spinner spinner = (Spinner) popUpTimeView.findViewById(R.id.spinnerTime);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(Caracteristicas.this, R.array.horas, android.R.layout.simple_spinner_item);
@@ -118,6 +157,7 @@ public class Caracteristicas extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+
                 // Create a alert dialog builder.
                 final AlertDialog.Builder builder = new AlertDialog.Builder(Caracteristicas.this);
                 // Set title value.
@@ -131,7 +171,17 @@ public class Caracteristicas extends AppCompatActivity {
                 builder.setCancelable(true);
                 alertDialog = builder.create();
                 alertDialog.show();
+                Button acceptTime = (Button)popUpTimeView.findViewById(R.id.btn_timeaccept);
+                acceptTime.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tiempo = ((Spinner)popUpTimeView.findViewById(R.id.spinnerTime)).getSelectedItem().toString();
+
+                        alertDialog.cancel();
+                    }
+                });
             }
+
         });
     }
 
@@ -158,6 +208,16 @@ public class Caracteristicas extends AppCompatActivity {
                 builder.setCancelable(true);
                 alertDialog = builder.create();
                 alertDialog.show();
+
+                Button acceptTypeRoad = (Button)popUpTimeView.findViewById(R.id.btn_roadaccept);
+                acceptTypeRoad.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tipoCamino = ((Spinner)popUpTimeView.findViewById(R.id.spinner_typeRoad)).getSelectedItem().toString();
+
+                        alertDialog.cancel();
+                    }
+                });
             }
         });
     }
@@ -186,6 +246,15 @@ public class Caracteristicas extends AppCompatActivity {
                 builder.setCancelable(true);
                 alertDialog = builder.create();
                 alertDialog.show();
+                Button acceptCost = (Button)popUpTimeView.findViewById(R.id.btn_costaccept);
+                acceptCost.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        precio = ((Spinner)popUpTimeView.findViewById(R.id.spinner_cost)).getSelectedItem().toString();
+
+                        alertDialog.cancel();
+                    }
+                });
             }
         });
     }
@@ -213,7 +282,17 @@ public class Caracteristicas extends AppCompatActivity {
                 builder.setCancelable(true);
                 alertDialog = builder.create();
                 alertDialog.show();
+                Button acceptStyle = (Button)popUpTimeView.findViewById(R.id.btn_styleaccept);
+                acceptStyle.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        estiloDestino = ((Spinner)popUpTimeView.findViewById(R.id.spinner_style)).getSelectedItem().toString();
+
+                        alertDialog.cancel();
+                    }
+                });
             }
         });
+
     }
 }

@@ -55,6 +55,20 @@ public class Mapadelsitio extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button resultados = (Button)findViewById(R.id.btn_search);
+        resultados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Mapadelsitio.this, Resultados.class);
+                //pasamos el nombre de usuario y la actividad
+                Bundle bundle = new Bundle();
+                //coloca el mensaje que la actividad va a transmitir
+                intent.putExtras(bundle);
+                //hace el paso de actividades
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

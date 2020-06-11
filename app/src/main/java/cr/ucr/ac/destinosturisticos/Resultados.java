@@ -329,9 +329,9 @@ public class Resultados extends AppCompatActivity {
                     dataDestination3.setText(textDestinations3);
                 }
 
-                Picasso.get().load(""+imageDestinations1).resize(300,250).centerCrop().error(R.mipmap.ic_launcher_camino).into(image1);
-                Picasso.get().load(""+imageDestinations2).resize(300,250).centerCrop().error(R.mipmap.ic_launcher_camino).into(image2);
-                Picasso.get().load(""+imageDestinations3).resize(300,250).centerCrop().error(R.mipmap.ic_launcher_camino).into(image3);
+                Picasso.get().load(""+imageDestinations1).resize(275,183).centerCrop().error(R.mipmap.ic_launcher_camino).into(image1);
+                Picasso.get().load(""+imageDestinations2).resize(275,183).centerCrop().error(R.mipmap.ic_launcher_camino).into(image2);
+                Picasso.get().load(""+imageDestinations3).resize(275,183).centerCrop().error(R.mipmap.ic_launcher_camino).into(image3);
 
 
             }catch (Exception ex){

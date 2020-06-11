@@ -213,7 +213,7 @@ public class Resultados extends AppCompatActivity {
 
         if (connection==null){
 
-            Toast.makeText(Resultados.this, "Error de conección con BD",
+            Toast.makeText(Resultados.this, "Error de conexión con BD",
                     Toast.LENGTH_SHORT).show();
         }else {
             String query = "SELECT `destinosturisticosse`.`Id` FROM `proyectos_expertos_b16213_b77436`.`destinosturisticosse` WHERE `destinosturisticosse`.`Lugar`='"+placeSearch+"';";
